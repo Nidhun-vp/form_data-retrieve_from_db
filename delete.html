@@ -1,0 +1,22 @@
+<html>
+<head>
+<title>Submit Form</title>
+<link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+        <h1>Delete Data</h1>
+        <form action="/delete-data" method="POST">
+            <label for="name">Select Name:</label>
+            <select id="name" name="name">
+                <!-- Populate dropdown options dynamically using Handlebars -->
+                {{#each names}}
+                <option value="{{this}}">{{this}}</option>
+                {{/each}}
+            </select><br><br>
+         
+            <button type="submit">Delete Data</button>
+        </form>
+
+</body>
+</html>
